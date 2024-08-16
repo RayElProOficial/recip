@@ -30,7 +30,7 @@ namespace REC
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             RecipeOpened.RecipeRute = openFileDialog1.FileName; 
-            new RecipeOpened().Show();
+            new RecipeOpened().ShowDialog();
         }
     }
 }

@@ -31,14 +31,14 @@ namespace REC {
 
             foreach (string line in sectionLines)
             {
-                textBox1.Text += line;
+                textBox1.Text = textBox1.Text + "\n" + line;
             }
             sectionName = "Steps";
             sectionLines = RecipApp.ReadSection(filePath, sectionName);
 
             foreach (string line in sectionLines)
             {
-                textBox2.Text += line;
+                textBox2.Text = textBox2.Text + "\n" + line;
             }
 
             sectionName = "RecipeName";
