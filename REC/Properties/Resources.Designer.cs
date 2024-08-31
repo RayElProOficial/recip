@@ -59,5 +59,15 @@ namespace recip.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap COLOR_logo_83x68 {
+            get {
+                object obj = ResourceManager.GetObject("COLOR_logo_83x68", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
