@@ -63,10 +63,80 @@ namespace recip.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap B_W_logo_83x68 {
+            get {
+                object obj = ResourceManager.GetObject("B_W_logo_83x68", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon B_W_logo_83x681 {
+            get {
+                object obj = ResourceManager.GetObject("B_W_logo_83x681", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap COLOR_logo_800x600_Basic_reescaled {
+            get {
+                object obj = ResourceManager.GetObject("COLOR_logo_800x600_Basic_reescaled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon COLOR_logo_800x600_Basic_reescaled1 {
+            get {
+                object obj = ResourceManager.GetObject("COLOR_logo_800x600_Basic_reescaled1", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap COLOR_logo_83x68 {
             get {
                 object obj = ResourceManager.GetObject("COLOR_logo_83x68", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon COLOR_logo_83x681 {
+            get {
+                object obj = ResourceManager.GetObject("COLOR_logo_83x681", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MONO_logo_83x68 {
+            get {
+                object obj = ResourceManager.GetObject("MONO_logo_83x68", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon MONO_logo_83x681 {
+            get {
+                object obj = ResourceManager.GetObject("MONO_logo_83x681", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
     }
