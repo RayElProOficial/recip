@@ -67,12 +67,12 @@ namespace REC
         {
             if (button4.Text == "-")
             {
-                Size = new Size(454,134);
+                Size = new Size(454,166);
                 button4.Text = "+";
             }
             else if (button4.Text == "+")
             {
-                Size = new Size(454, 174);
+                Size = new Size(454, 203);
                 button4.Text = "-";
             }
         }
