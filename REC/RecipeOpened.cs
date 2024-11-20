@@ -13,6 +13,7 @@ namespace REC {
     public partial class RecipeOpened : Form
     {
         public static string RecipeRute;
+        public static bool OpenedByFile;
         public RecipeOpened()
         {
             InitializeComponent();
@@ -25,20 +26,28 @@ namespace REC {
 
         private void RecipeOpened_Load(object sender, EventArgs e)
         {
+            if (OpenedByFile!=true)
+            {
+                button2.Hide();
+            }
+            else
+            {
+                button1.Hide();
+            }
             string filePath = RecipeRute;
             string sectionName = "Ingredients";
             List<string> sectionLines = RecipApp.ReadSection(filePath, sectionName);
 
             foreach (string line in sectionLines)
             {
-                textBox1.Text = textBox1.Text + "\n" + line;
+                textBox1.Text = textBox1.Text + "\r\n" + line;
             }
             sectionName = "Steps";
             sectionLines = RecipApp.ReadSection(filePath, sectionName);
 
             foreach (string line in sectionLines)
             {
-                textBox2.Text = textBox2.Text + "\n" + line;
+                textBox2.Text = textBox2.Text + "\r\n" + line;
             }
 
             sectionName = "RecipeName";

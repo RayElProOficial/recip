@@ -1,7 +1,21 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="recip.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LastRecipe" Type="System.String" Scope="User">
+      <Value Profile="(Default)">No last recipe</Value>
+    </Setting>
+    <Setting Name="penLastRecipe" Type="System.String" Scope="User">
+      <Value Profile="(Default)">No recipe</Value>
+    </Setting>
+    <Setting Name="LRRoute" Type="System.String" Scope="User">
+      <Value Profile="(Default)">about:blank</Value>
+    </Setting>
+    <Setting Name="pLRRoute" Type="System.String" Scope="User">
+      <Value Profile="(Default)">about:blank</Value>
+    </Setting>
+    <Setting Name="noLastRecipe" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

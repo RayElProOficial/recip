@@ -22,5 +22,65 @@ namespace recip.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("No last recipe")]
+        public string LastRecipe {
+            get {
+                return ((string)(this["LastRecipe"]));
+            }
+            set {
+                this["LastRecipe"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("No recipe")]
+        public string penLastRecipe {
+            get {
+                return ((string)(this["penLastRecipe"]));
+            }
+            set {
+                this["penLastRecipe"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("about:blank")]
+        public string LRRoute {
+            get {
+                return ((string)(this["LRRoute"]));
+            }
+            set {
+                this["LRRoute"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("about:blank")]
+        public string pLRRoute {
+            get {
+                return ((string)(this["pLRRoute"]));
+            }
+            set {
+                this["pLRRoute"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool noLastRecipe {
+            get {
+                return ((bool)(this["noLastRecipe"]));
+            }
+            set {
+                this["noLastRecipe"] = value;
+            }
+        }
     }
 }

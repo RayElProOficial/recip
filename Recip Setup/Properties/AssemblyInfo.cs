@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("recip")]
-[assembly: AssemblyDescription("Recipe manager for Windows")]
+[assembly: AssemblyTitle("Recip Setup")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("iNS")]
-[assembly: AssemblyProduct("recip")]
-[assembly: AssemblyCopyright("Copyleft. Redistribute as much as you want")]
-[assembly: AssemblyTrademark("None.")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("Recip Setup")]
+[assembly: AssemblyCopyright("Copyright ©  2024")]
+[assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 // Si establece ComVisible en false, los tipos de este ensamblado no estarán visibles 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
-[assembly: Guid("e971def7-a49a-42c4-bfe0-fce4835c421f")]
+[assembly: Guid("7b002605-2ed0-48c1-972f-e3347caa6f45")]
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // Puede especificar todos los valores o usar los valores predeterminados de número de compilación y de revisión
 // utilizando el carácter "*", como se muestra a continuación:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.8.0.0")]
-[assembly: AssemblyFileVersion("0.8.0.0")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

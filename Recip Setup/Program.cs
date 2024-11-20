@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace REC
+namespace Recip_Setup
 {
     internal static class Program
     {
@@ -12,21 +12,11 @@ namespace REC
         /// Punto de entrada principal para la aplicación.
         /// </summary>
         [STAThread]
-        static void Main(string[] args)
+        static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            if (args.Length > 0)
-            {
-                string file = args[0];
-                RecipeOpened.RecipeRute = file;
-                RecipeOpened.OpenedByFile = true;
-                Application.Run(new RecipeOpened());
-            }
-            else
-            {
-                Application.Run(new Form1());
-            }
+            Application.Run(new Form1());
         }
     }
 }

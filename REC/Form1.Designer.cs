@@ -38,8 +38,14 @@
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -83,9 +89,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(156, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.Size = new System.Drawing.Size(69, 20);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Beta 0.7";
+            this.label1.Text = "Beta 0.8";
             // 
             // comboBox1
             // 
@@ -97,7 +103,7 @@
             "Color (reescalated to 800x600)"});
             this.comboBox1.Location = new System.Drawing.Point(6, 30);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(121, 28);
             this.comboBox1.TabIndex = 4;
             this.comboBox1.Text = "Color";
             // 
@@ -132,10 +138,50 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.panel1);
+            this.groupBox2.Location = new System.Drawing.Point(232, 7);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(188, 100);
+            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Latest recipes";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Location = new System.Drawing.Point(6, 25);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(176, 69);
+            this.panel1.TabIndex = 0;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(4, 40);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(169, 23);
+            this.button6.TabIndex = 1;
+            this.button6.Text = "(recipename)";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(3, 4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(169, 23);
+            this.button5.TabIndex = 0;
+            this.button5.Text = "(recipename)";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(238, 135);
+            this.ClientSize = new System.Drawing.Size(432, 118);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -144,11 +190,16 @@
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(454, 174);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(254, 134);
             this.Name = "Form1";
             this.Text = "Recip Beta";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,6 +216,10 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
     }
 }
 
