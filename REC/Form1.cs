@@ -98,12 +98,12 @@ namespace REC
         {
             if (button4.Text == "-")
             {
-                Size = new Size(454,166);
+                Size = MinimumSize;
                 button4.Text = "+";
             }
             else if (button4.Text == "+")
             {
-                Size = new Size(454, 203);
+                Size = this.MaximumSize;
                 button4.Text = "-";
             }
         }
