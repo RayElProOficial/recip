@@ -117,4 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Recip Beta 0.9 is the latest build (as of 29-04-2025). Its license is Creative 
+Commons - Attribution - Non Commercial - Share Alike. To contribute,
+visit the project site: https://github.com/rayelprooficial/recip</value>
+  </data>
 </root>

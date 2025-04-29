@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.webView2 = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.webView2)).BeginInit();
             this.SuspendLayout();
@@ -50,26 +52,36 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(101, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 16);
+            this.label1.Size = new System.Drawing.Size(98, 16);
             this.label1.TabIndex = 1;
-            this.label1.Text = "RECIP Beta 0.9 [Internal Beta 0.9.4]\r\n";
+            this.label1.Text = "RECIP Beta 0.9";
             // 
             // webView2
             // 
             this.webView2.AllowExternalDrop = true;
             this.webView2.CreationProperties = null;
             this.webView2.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webView2.Location = new System.Drawing.Point(12, 115);
+            this.webView2.Location = new System.Drawing.Point(12, 86);
             this.webView2.Name = "webView2";
-            this.webView2.Size = new System.Drawing.Size(291, 36);
+            this.webView2.Size = new System.Drawing.Size(528, 56);
             this.webView2.TabIndex = 0;
             this.webView2.ZoomFactor = 1D;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(104, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(436, 48);
+            this.label2.TabIndex = 2;
+            this.label2.Text = resources.GetString("label2.Text");
             // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(315, 163);
+            this.ClientSize = new System.Drawing.Size(552, 154);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.webView2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -92,5 +104,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private Microsoft.Web.WebView2.WinForms.WebView2 webView2;
+        private System.Windows.Forms.Label label2;
     }
 }
