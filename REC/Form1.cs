@@ -26,18 +26,49 @@ namespace REC
 
         private void button1_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
+            using (var dialog = new OpenFileDialog())
+            {
+                dialog.Filter = "Recipes|*.rec|All files|*.*";
+                dialog.Title = "Where is the recipe?";
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        Settings.Default.penLastRecipe = Settings.Default.LastRecipe;
+                        Settings.Default.pLRRoute = Settings.Default.LRRoute;
+                        Settings.Default.LastRecipe = dialog.FileName.Substring(dialog.FileName.LastIndexOf('\\') + 1);
+                        Settings.Default.LRRoute = dialog.FileName;
+                        Settings.Default.Save();
+                        RecipeOpened.RecipeRute = dialog.FileName;
+                        new RecipeOpened().ShowDialog();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
+
+
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
-            Settings.Default.penLastRecipe = Settings.Default.LastRecipe;
-            Settings.Default.pLRRoute = Settings.Default.LRRoute;
-            Settings.Default.LastRecipe = openFileDialog1.FileName.Substring(openFileDialog1.FileName.LastIndexOf('\\')+1);
-            Settings.Default.LRRoute = openFileDialog1.FileName;
-            Settings.Default.Save();
-            RecipeOpened.RecipeRute = openFileDialog1.FileName; 
-            new RecipeOpened().ShowDialog();
+
+            try
+            {
+                Settings.Default.penLastRecipe = Settings.Default.LastRecipe;
+                Settings.Default.pLRRoute = Settings.Default.LRRoute;
+                Settings.Default.LastRecipe = openFileDialog1.FileName.Substring(openFileDialog1.FileName.LastIndexOf('\\') + 1);
+                Settings.Default.LRRoute = openFileDialog1.FileName;
+                Settings.Default.Save();
+                RecipeOpened.RecipeRute = openFileDialog1.FileName;
+                new RecipeOpened().ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -85,14 +116,60 @@ namespace REC
 
         private void button5_Click(object sender, EventArgs e)
         {
+            if (button5.Text == "No last recipe" || button5.Text == "No recipe")
+            {
+                MessageBox.Show("No recipe selected", "RECIP", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
             RecipeOpened.RecipeRute = Settings.Default.LRRoute;
             new RecipeOpened().ShowDialog();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
+            if (button6.Text == "No recipe" || button6.Text == "No last recipe")
+            {
+                MessageBox.Show("No recipe selected", "RECIP", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
             RecipeOpened.RecipeRute = Settings.Default.pLRRoute;
             new RecipeOpened().ShowDialog();
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var dialog = new OpenFileDialog())
+            {
+                dialog.Filter = "Recipes|*.rec|All files|*.*";
+                dialog.Title = "Where is the recipe?";
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        Settings.Default.penLastRecipe = Settings.Default.LastRecipe;
+                        Settings.Default.pLRRoute = Settings.Default.LRRoute;
+                        Settings.Default.LastRecipe = dialog.FileName.Substring(dialog.FileName.LastIndexOf('\\') + 1);
+                        Settings.Default.LRRoute = dialog.FileName;
+                        Settings.Default.Save();
+                        RecipeOpened.RecipeRute = dialog.FileName;
+                        new RecipeOpened().ShowDialog();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new MakeRecipe().ShowDialog();
+        }
+
+        private void aboutRecipToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new About().ShowDialog();
         }
     }
 }

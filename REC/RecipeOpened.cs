@@ -26,6 +26,8 @@ namespace REC {
 
         private void RecipeOpened_Load(object sender, EventArgs e)
         {
+            textBox1.Text = null;
+            textBox2.Text = null;
             if (OpenedByFile!=true)
             {
                 button2.Hide();
@@ -40,15 +42,31 @@ namespace REC {
 
             foreach (string line in sectionLines)
             {
-                textBox1.Text = textBox1.Text + "\r\n" + line;
+                if (string.IsNullOrEmpty(textBox1.Text)) // Verifica si el TextBox está vacío
+                {
+                    textBox1.Text = line;
+                }
+                else
+                {
+                    textBox1.Text += "\r\n" + line; // Agrega un salto de línea solo si ya hay texto
+                }
             }
+
             sectionName = "Steps";
             sectionLines = RecipApp.ReadSection(filePath, sectionName);
 
             foreach (string line in sectionLines)
             {
-                textBox2.Text = textBox2.Text + "\r\n" + line;
+                if (string.IsNullOrEmpty(textBox2.Text)) // Verifica si el TextBox está vacío
+                {
+                    textBox2.Text = line;
+                }
+                else
+                {
+                    textBox2.Text += "\r\n" + line; // Agrega un salto de línea solo si ya hay texto
+                }
             }
+
 
             sectionName = "RecipeName";
             sectionLines = RecipApp.ReadSection(filePath, sectionName);
