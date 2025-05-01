@@ -75,6 +75,15 @@ namespace REC {
             {
                 Text = line;
             }
+            //Label1: Ingredients:
+            //Label2: Steps:
+            //Button1: <Back
+            //Button2: Close
+            label1.Text = Strings.LabelIngredients;
+            label2.Text = Strings.LabelSteps;
+            button1.Text = Strings.BtnBack;
+            button2.Text = Strings.BtnClose;
+
         }
 
         private void button1_Click(object sender, EventArgs e)

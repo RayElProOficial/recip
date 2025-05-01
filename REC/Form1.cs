@@ -79,15 +79,27 @@ namespace REC
                     Icon = Resources.B_W_logo_83x681;
                     pictureBox1.Image = Resources.B_W_logo_83x68;
                     break;
+                case "B/N":
+                    Icon = Resources.B_W_logo_83x681;
+                    pictureBox1.Image = Resources.B_W_logo_83x68;
+                    break;
                 case "COLOR":
                     Icon = Resources.COLOR_logo_83x681;
                     pictureBox1.Image = Resources.COLOR_logo_83x68;
                     break;
-                case "COLOR (REESCALATED TO 800X600)":
+                case "COLOR (REESCALADO)":
+                    Icon = Resources.COLOR_logo_800x600_Basic_reescaled1;
+                    pictureBox1.Image = Resources.COLOR_logo_800x600_Basic_reescaled;
+                    break;
+                case "COLOR (RESCALED)":
                     Icon = Resources.COLOR_logo_800x600_Basic_reescaled1;
                     pictureBox1.Image = Resources.COLOR_logo_800x600_Basic_reescaled;
                     break;
                 case "MONOCHROMATIC":
+                    Icon = Resources.MONO_logo_83x681;
+                    pictureBox1.Image = Resources.MONO_logo_83x68;
+                    break;
+                case "MONOCROMÁTICO":
                     Icon = Resources.MONO_logo_83x681;
                     pictureBox1.Image = Resources.MONO_logo_83x68;
                     break;
@@ -110,15 +122,53 @@ namespace REC
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            /*archivoToolStripMenuItem (File)
+             * newToolStripMenuItem (File->New)
+             * openToolStripMenuItem (File->Open)
+             * helpToolStripMenuItem (Help)
+             * aboutRecipToolStripMenuItem (Help->About Recip)
+             * button1 (Open)
+             * button2 (Make)
+             * groupBox1 (App Settings)
+             * comboBox1 (Color)
+             * button3 (Set logo)
+             * groupBox2 (Latest recipes)
+             * comboBox1.Contenidos (Color, Color reescalated...)
+             * languageToolStripMenuItem (Language)
+             * toolStripMenuItem1 (./)
+             */
             button5.Text = Settings.Default.LastRecipe;
             button6.Text = Settings.Default.penLastRecipe;
+            archivoToolStripMenuItem.Text = Strings.MenuFile;
+            newToolStripMenuItem.Text = Strings.MenuFileNew;
+            openToolStripMenuItem.Text = Strings.MenuFileOpen;
+            helpToolStripMenuItem.Text = Strings.MenuHelp;
+            aboutRecipToolStripMenuItem.Text = Strings.MenuHelpAbout;
+            button1.Text = Strings.BtnOpen;
+            button2.Text = Strings.BtnMake;
+            groupBox1.Text = Strings.GroupAppSettings;
+            comboBox1.Items.Clear();
+            comboBox1.Items.Add(Strings.ComboBW);
+            comboBox1.Items.Add(Strings.ComboColor);
+            comboBox1.Items.Add(Strings.ComboColorRescaled);
+            comboBox1.Items.Add(Strings.ComboMonochromatic);
+            groupBox2.Text = Strings.GroupLatestRecipes;
+            ToolTip toolTip1 = new ToolTip();
+            toolTip1.SetToolTip(button7, Strings.ToolTipReset);
+            ToolTip restart = new ToolTip();
+            restart.SetToolTip(button8, Strings.ToolTipRestart);
+            languageToolStripMenuItem.Text = Strings.MenuLanguage;
+            toolStripMenuItem1.Text = Strings.MenuLanguageChange;
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (button5.Text == "No last recipe" || button5.Text == "No recipe")
+            string nlr = Strings.BtnNoLastRecipe;
+            string nr = Strings.BtnNoRecipe;
+            string nrs = Strings.MsgNoRecipeSelected;
+            if (button5.Text == nlr || button5.Text == nr)
             {
-                MessageBox.Show("No recipe selected", "RECIP", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(nrs, "RECIP", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return;
             }
             RecipeOpened.RecipeRute = Settings.Default.LRRoute;
@@ -127,9 +177,12 @@ namespace REC
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (button6.Text == "No recipe" || button6.Text == "No last recipe")
+            string nlr = Strings.BtnNoLastRecipe;
+            string nr = Strings.BtnNoRecipe;
+            string nrs = Strings.MsgNoRecipeSelected;
+            if (button6.Text == nr || button6.Text == nlr)
             {
-                MessageBox.Show("No recipe selected", "RECIP", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(nrs, "RECIP", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return;
             }
             RecipeOpened.RecipeRute = Settings.Default.pLRRoute;
@@ -170,6 +223,42 @@ namespace REC
         private void aboutRecipToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new About().ShowDialog();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            new lang().ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            string msg = Strings.MsgResetSettings;
+            var dr = MessageBox.Show(msg, "RECIP", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            switch (dr)
+            {
+                case DialogResult.Yes:
+                    ResetSettings();
+                    break;
+                case DialogResult.No:
+                    break;
+            }
+        }
+        void ResetSettings()
+        {
+            Settings.Default.Reset();
+            Settings.Default.Save();
+            MessageBox.Show("Settings reseted", "RECIP", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Application.Restart();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
+        private void languageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

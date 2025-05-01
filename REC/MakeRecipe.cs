@@ -53,13 +53,27 @@ namespace recip
             string[] inf =
             {
                 "[RecipeName]",
-                $"{textBox1.Text}",
-                "[Ingredients]",
                 $"{textBox2.Text}",
+                "[Ingredients]",
+                $"{textBox1.Text}",
                 "[Steps]",
                 $"{textBox3.Text}"
             };
             File.WriteAllLines(saveFileDialog1.FileName, inf);
+        }
+
+        private void MakeRecipe_Load(object sender, EventArgs e)
+        {
+            //Label1: Recipe Name
+            //Label3: Ingredients
+            //Label2: Steps
+            //Button1: Save
+            //Button2: Cancel
+            label1.Text = Strings.LabelRecipeName;
+            label3.Text = Strings.LabelIngredients;
+            label2.Text = Strings.LabelSteps;
+            button1.Text = Strings.BtnSave;
+            button2.Text = Strings.BtnClose;
         }
     }
 }

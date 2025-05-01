@@ -117,38 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="B_W_logo_83x68" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\B&amp;W_logo_83x68.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>RECIP: Hey! If you are reading this, please contribute to the development of the application. I am an only person who made all this. And no joking, I am not even overage to legally work in a company, so please contribute to Recip. You need knowledge of C#. To contribute, clone the repository (found in the app, when you select "Help" and "About"), modify the code and create a pull request on GitHub. Together we can. And remember that if you are reading this, you are special, because 97% of people on USA (88% on Spain) simply accept agreements without reading. I do this because I am selected to this. I am going to be an important coder in the future. I started being 7 years old with my application "TL Win", and then I was making my coding skills better and here I am now! Coding for you in my house sit on a chair. Please, if you found this program useful, contribute. If we are more people, the program will update quicklier, this is the version 0.9 (BETA), and I expect that in a month or two I will finish the 1.0 (Stable). You can find all my other projects in my GitHub accout, RayElProOficial, I am from Spain. And now, the most important of all. This program is licensed under the CC BY-NC-SA 4.0</value>
   </data>
-  <data name="COLOR_logo_83x68" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\COLOR_logo_83x68.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="B_W_logo_83x681" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\B&amp;W_logo_83x68.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-spain-flag-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-spain-flag-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="COLOR_logo_800x600_Basic_reescaled1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\COLOR_logo_800x600_Basic-reescaled.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-usa-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-usa-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="COLOR_logo_83x681" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\COLOR_logo_83x68.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="COLOR_logo_800x600_Basic_reescaled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\COLOR_logo_800x600_Basic-reescaled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MONO_logo_83x681" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MONO_logo_83x68.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MONO_logo_83x68" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MONO_logo_83x68.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-reset-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-reset-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAQAAEABADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAgAIAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAwMDAAICAgAAAAP8AAP8AAAD//wD/AAAA/wD/AP//
+        AAD///8AAAAAAAAAAAAAAAAAAAAAAACHd3eAAAAAAAAAD/AAAAAAj///iAAAAAAAAAAAAAAAAI///4eA
+        AAAAAAAAAAAAAACP//+HeAAAAAAAAAAAAAAAj///h3eAgP////iIiIAAAI///4d3cIgAAAAAd3eIAACP
+        //+Hd3CIcADwAAd3iIAATMzMQXdwiAAAAAAAd4iAAEzMzEQXcIh4iIiIiHeIgABMzMxEQXCId3d3eIh3
+        iIAATMzMREQQd////////4iAAEzMzAREQIiIiIiIiIh4gAiP//8AREAAAAAAAAAIh4CIj///BwRAiIiI
+        iCIogIhwiHiIiHfwQIh3d3eqp4gIgIeHd4h//wB3//////eIAACPeHdwiIiABERERET3iAAACPeHCP//
+        cEzMzMzE94gAAACPcAj//3BMzMzMxPeIAAAACPAAiIiAzMzMzMT3iAAAAACACAAADMzMzMzE94gAAAAA
+        AAj3DMzMzMzMxPeIAAAAAAAI9wzszMzMzMT3iAAAAAAACPcM7MzMzMzE94gAAAAAAAj3DMzMzMzMxPeI
+        AAAAAAAI9wAAAAAAAAT3iAAAAAAACPeIiIiIiIiI94gAAAAAAAj3d3d3d3d3d3eIAAAAAAAAj///////
+        ////iAAAAAAAAAh3d3d3d3d3d/gAAAAAAAAAiIiIiIiIiIiIAADAf+APwD/wB8Af+AfAD///wAAAB8AA
+        AAPAAAABwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAgAAAAAAAAAAAAAABAAAABwAAAAcAAAAHgAAAB8IA
+        AAfiAAAH8gAAB/4AAAf+AAAH/gAAB/4AAAf+AAAH/gAAB/8AAAf/gAAH/8AADw==
+</value>
   </data>
 </root>

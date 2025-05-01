@@ -19,6 +19,8 @@ namespace recip
 
         private void About_Load(object sender, EventArgs e)
         {
+            //Label2:textolargo
+            label2.Text = Strings.LabelAbout;
             string htmlFilePath = System.IO.Path.Combine(Application.StartupPath, "About.html");
             if (System.IO.File.Exists(htmlFilePath))
             {
