@@ -66,8 +66,8 @@ Los archivos `.rec` son archivos de recetas en texto plano.
 
 ## ⚖️ License | Licencia
 
-Open-source under the [CC BY-NC-SA 4.0 license](LICENSE)  
-Código abierto bajo la [licencia CC BY-NC-SA 4.0](LICENSE)
+Open-source under the [MIT license](LICENSE)  
+Código abierto bajo la [licencia MIT](LICENSE)
 
 ---
 
