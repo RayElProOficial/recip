@@ -5,10 +5,6 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REC", "REC\REC.csproj", "{E971DEF7-A49A-42C4-BFE0-FCE4835C421F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipSetupWPI", "RecipSetupWPI\RecipSetupWPI.csproj", "{CB08BAFE-9382-49D7-BA8C-30A634606024}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "recipsetup", "recipsetup\recipsetup.csproj", "{DC03C03A-5665-450B-9C82-1097B8C501CB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,14 +15,6 @@ Global
 		{E971DEF7-A49A-42C4-BFE0-FCE4835C421F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E971DEF7-A49A-42C4-BFE0-FCE4835C421F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E971DEF7-A49A-42C4-BFE0-FCE4835C421F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CB08BAFE-9382-49D7-BA8C-30A634606024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CB08BAFE-9382-49D7-BA8C-30A634606024}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CB08BAFE-9382-49D7-BA8C-30A634606024}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CB08BAFE-9382-49D7-BA8C-30A634606024}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DC03C03A-5665-450B-9C82-1097B8C501CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DC03C03A-5665-450B-9C82-1097B8C501CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DC03C03A-5665-450B-9C82-1097B8C501CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DC03C03A-5665-450B-9C82-1097B8C501CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
