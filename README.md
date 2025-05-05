@@ -31,10 +31,10 @@ Latest release: [Recip v1.0](https://github.com/RayElProOficial/Recip/releases)
 
 ### Installers available | Instaladores disponibles:
 
-- ✅ **Windows x64** – Most common | El más común
-- 💾 **Windows x86** – For older systems | Para sistemas antiguos
-- 💡 **Windows ARM64** – For Surface Copilot+, etc. | Para Surface Copilot+, etc.
-- 🖥️ **deneOS Installer** – Custom path: `C:\Software\iNS\Recip` | Ruta personalizada
+- ✅ **Windows x64** – Most common | El más común (v1.1)
+- 💾 **Windows x86** – For older systems | Para sistemas antiguos (v1.0)
+- 💡 **Windows ARM64** – For Surface Copilot+, etc. | Para Surface Copilot+, etc. (v1.0)
+- 🖥️ **deneOS Installer** – Custom path: `C:\Software\iNS\Recip` | Ruta personalizada (v1.0)
 
 > All installers are made with **NSIS**.  
 > Todos los instaladores han sido creados con **NSIS**.
