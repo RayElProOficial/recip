@@ -33,8 +33,8 @@
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
     <AutorunEnabled>true</AutorunEnabled>
     <TrustUrlParameters>true</TrustUrlParameters>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -74,7 +74,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>COLOR_logo_83x68.ico</ApplicationIcon>
+    <ApplicationIcon>RecipV2_NoBackground.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
@@ -129,6 +129,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="read.cs" />
     <Compile Include="RecipeOpened.cs">
       <SubType>Form</SubType>
@@ -151,14 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="RecipeOpened.resx">
       <DependentUpon>RecipeOpened.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +204,15 @@
     </Content>
     <Content Include="COLOR_logo_83x68.ico" />
     <Content Include="icons8-recipe-70.ico" />
+    <Content Include="RecipV2_NoBackground.ico" />
+    <None Include="Resources\recipiconnbnew.ico" />
+    <None Include="Resources\recipiconrescnew.ico" />
+    <None Include="Resources\recipiconmononew.ico" />
+    <None Include="Resources\recipiconbnnew.ico" />
+    <None Include="Resources\reciplogomono.png" />
+    <None Include="Resources\reciplogobn.png" />
+    <None Include="Resources\reciplogoresc.png" />
+    <None Include="Resources\recip new.png" />
     <None Include="Resources\icons8-reset-64.png" />
     <None Include="Resources\icons8-spain-flag-100.png" />
     <None Include="Resources\icons8-usa-100.png" />

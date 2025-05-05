@@ -39,11 +39,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::recip.Properties.Resources.COLOR_logo_83x68;
+            this.pictureBox1.Image = global::recip.Properties.Resources.recip_new;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(83, 68);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -52,9 +52,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(101, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 16);
+            this.label1.Size = new System.Drawing.Size(70, 16);
             this.label1.TabIndex = 1;
-            this.label1.Text = "RECIP Beta 0.9";
+            this.label1.Text = "Recip v1.1";
             // 
             // webView2
             // 

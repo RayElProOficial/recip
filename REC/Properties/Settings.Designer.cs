@@ -94,5 +94,17 @@ namespace recip.Properties {
                 this["Language"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("COLORNEW")]
+        public string SavedLogo {
+            get {
+                return ((string)(this["SavedLogo"]));
+            }
+            set {
+                this["SavedLogo"] = value;
+            }
+        }
     }
 }

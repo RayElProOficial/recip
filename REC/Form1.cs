@@ -9,14 +9,62 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace REC
 {
     public partial class Form1 : Form
     {
+        /*
+         * ENUM: COLORNEW: Color (nuevo)
+         * COLORRESCNEW: Color (reescalado)
+         * COLORMONONEW: Color (monocromático)
+         * COLORBNNEW: Color (B/N)
+         */
+        public enum LogoOpt
+        {
+            COLORNEW,
+            COLORRESCNEW,
+            COLORMONONEW,
+            COLORBNNEW
+        }
+        public static LogoOpt selLogo;
         public Form1()
         {
             InitializeComponent();
+            // Obtener el logo desde la configuración
+            string logo = Settings.Default.SavedLogo;
+            if (Enum.TryParse(logo, out LogoOpt miOpcion))
+            {
+                switch (miOpcion)
+                {
+                    case LogoOpt.COLORNEW:
+                        Icon = Resources.recipiconnbnew;
+                        pictureBox1.Image = Resources.recip_new;
+                        comboBox1.Text = Strings.ComboColor;
+                        break;
+                    case LogoOpt.COLORRESCNEW:
+                        Icon = Resources.recipiconrescnew;
+                        pictureBox1.Image = Resources.reciplogoresc;
+                        comboBox1.Text = Strings.ComboColorRescaled;
+                        break;
+                    case LogoOpt.COLORMONONEW:
+                        Icon = Resources.recipiconmononew;
+                        pictureBox1.Image = Resources.reciplogomono;
+                        comboBox1.Text = Strings.ComboMonochromatic;
+                        break;
+                    case LogoOpt.COLORBNNEW:
+                        Icon = Resources.recipiconbnnew;
+                        pictureBox1.Image = Resources.reciplogobn;
+                        comboBox1.Text = Strings.ComboBW;
+                        break;
+                }
+            }
+            else
+            {
+                MessageBox.Show("ERROR 0x0001: Logo not found", "RECIP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -74,36 +122,44 @@ namespace REC
         private void button3_Click(object sender, EventArgs e)
         {
             switch (comboBox1.Text.ToUpper())
-            {
+            { 
                 case "B&W":
-                    Icon = Resources.B_W_logo_83x681;
-                    pictureBox1.Image = Resources.B_W_logo_83x68;
+                    Icon = Resources.recipiconbnnew;
+                    pictureBox1.Image = Resources.reciplogobn;
+                    Settings.Default.SavedLogo = LogoOpt.COLORBNNEW.ToString();
                     break;
                 case "B/N":
-                    Icon = Resources.B_W_logo_83x681;
-                    pictureBox1.Image = Resources.B_W_logo_83x68;
+                    Icon = Resources.recipiconbnnew;
+                    pictureBox1.Image = Resources.reciplogobn;
+                    Settings.Default.SavedLogo = LogoOpt.COLORBNNEW.ToString();
                     break;
                 case "COLOR":
-                    Icon = Resources.COLOR_logo_83x681;
-                    pictureBox1.Image = Resources.COLOR_logo_83x68;
+                    Icon = Resources.recipiconnbnew;
+                    pictureBox1.Image = Resources.recip_new;
+                    Settings.Default.SavedLogo = LogoOpt.COLORNEW.ToString();
                     break;
                 case "COLOR (REESCALADO)":
-                    Icon = Resources.COLOR_logo_800x600_Basic_reescaled1;
-                    pictureBox1.Image = Resources.COLOR_logo_800x600_Basic_reescaled;
+                    Icon = Resources.recipiconrescnew;
+                    pictureBox1.Image = Resources.reciplogoresc;
+                    Settings.Default.SavedLogo = LogoOpt.COLORRESCNEW.ToString();
                     break;
                 case "COLOR (RESCALED)":
-                    Icon = Resources.COLOR_logo_800x600_Basic_reescaled1;
-                    pictureBox1.Image = Resources.COLOR_logo_800x600_Basic_reescaled;
+                    Icon = Resources.recipiconrescnew;
+                    pictureBox1.Image = Resources.reciplogoresc;
+                    Settings.Default.SavedLogo = LogoOpt.COLORRESCNEW.ToString();
                     break;
                 case "MONOCHROMATIC":
-                    Icon = Resources.MONO_logo_83x681;
-                    pictureBox1.Image = Resources.MONO_logo_83x68;
+                    Icon = Resources.recipiconmononew;
+                    pictureBox1.Image = Resources.reciplogomono;
+                    Settings.Default.SavedLogo = LogoOpt.COLORMONONEW.ToString();
                     break;
                 case "MONOCROMÁTICO":
-                    Icon = Resources.MONO_logo_83x681;
-                    pictureBox1.Image = Resources.MONO_logo_83x68;
+                    Icon = Resources.recipiconmononew;
+                    pictureBox1.Image = Resources.reciplogomono;
+                    Settings.Default.SavedLogo = LogoOpt.COLORMONONEW.ToString();
                     break;
             }
+            Settings.Default.Save();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -150,7 +206,6 @@ namespace REC
             comboBox1.Items.Clear();
             comboBox1.Items.Add(Strings.ComboBW);
             comboBox1.Items.Add(Strings.ComboColor);
-            comboBox1.Items.Add(Strings.ComboColorRescaled);
             comboBox1.Items.Add(Strings.ComboMonochromatic);
             groupBox2.Text = Strings.GroupLatestRecipes;
             ToolTip toolTip1 = new ToolTip();
@@ -167,7 +222,7 @@ namespace REC
             string nr = Strings.BtnNoRecipe;
             string nrs = Strings.MsgNoRecipeSelected;
             if (button5.Text == nlr || button5.Text == nr)
-            {
+            {//NLR: No Last Recipe | NR: No Recipe | NRS: No Recipe Selected
                 MessageBox.Show(nrs, "RECIP", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return;
             }
@@ -199,17 +254,21 @@ namespace REC
                 {
                     try
                     {
+                        // Guardar la ruta del último archivo abierto
                         Settings.Default.penLastRecipe = Settings.Default.LastRecipe;
                         Settings.Default.pLRRoute = Settings.Default.LRRoute;
                         Settings.Default.LastRecipe = dialog.FileName.Substring(dialog.FileName.LastIndexOf('\\') + 1);
                         Settings.Default.LRRoute = dialog.FileName;
+                        // Aplica los cambios
                         Settings.Default.Save();
                         RecipeOpened.RecipeRute = dialog.FileName;
+                        // Abre la receta
                         new RecipeOpened().ShowDialog();
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        // Gestiona el error, mostrando un Msgbox
                     }
                 }
             }

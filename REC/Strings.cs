@@ -57,7 +57,7 @@ public static class Strings
                 MenuFileNew = "&New";
                 MenuFileOpen = "&Open";
                 MenuHelpAbout = "&About Recip";
-                LabelAbout = "Recip 1.0 is the latest build (as of 29-04-2025). Its license is Creative\nCommons - Attribution - Non Commercial - Share Alike. To contribute,\nvisit the project site: https://github.com/rayelprooficial/recip";
+                LabelAbout = "Recip 1.0 is the latest build (as of 1-05-2025). Its license is Creative\nCommons - Attribution - Non Commercial - Share Alike. To contribute,\nvisit the project site: https://github.com/rayelprooficial/recip";
                 LabelRecipeName = "Recipe Name:";
                 LabelIngredients = "Ingredients:";
                 LabelSteps = "Steps:";
@@ -90,7 +90,7 @@ public static class Strings
                 MenuFileNew = "&Nuevo";
                 MenuFileOpen = "&Abrir";
                 MenuHelpAbout = "Acerca de &Recip";
-                LabelAbout = "Recip 1.0 es la versión más reciente (al 29-04-2025). Su licencia es Creative\nCommons - Atribución - No Comercial - Compartir Igual. Para contribuir,\nvisita el proyecto: https://github.com/rayelprooficial/recip";
+                LabelAbout = "Recip 1.0 es la versión más reciente (al 1-05-2025). Su licencia es Creative\nCommons - Atribución - No Comercial - Compartir Igual. Para contribuir,\nvisita el proyecto: https://github.com/rayelprooficial/recip";
                 LabelRecipeName = "Nombre de la receta:";
                 LabelIngredients = "Ingredientes:";
                 LabelSteps = "Pasos:";
