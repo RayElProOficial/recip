@@ -43,9 +43,19 @@
             label1 = new Label();
             groupBox1 = new GroupBox();
             panel1 = new Panel();
+            button4 = new Button();
+            button3 = new Button();
+            groupBox2 = new GroupBox();
+            button8 = new Button();
+            button7 = new Button();
+            button6 = new Button();
+            button5 = new Button();
+            comboBox1 = new ComboBox();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
+            panel1.SuspendLayout();
+            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -68,14 +78,16 @@
             // newToolStripMenuItem
             // 
             newToolStripMenuItem.Name = "newToolStripMenuItem";
-            newToolStripMenuItem.Size = new Size(128, 26);
+            newToolStripMenuItem.Size = new Size(224, 26);
             newToolStripMenuItem.Text = "&New";
+            newToolStripMenuItem.Click += newToolStripMenuItem_Click;
             // 
             // openToolStripMenuItem
             // 
             openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(128, 26);
+            openToolStripMenuItem.Size = new Size(224, 26);
             openToolStripMenuItem.Text = "&Open";
+            openToolStripMenuItem.Click += openToolStripMenuItem_Click;
             // 
             // languageToolStripMenuItem
             // 
@@ -89,6 +101,7 @@
             toolStripMenuItem2.Name = "toolStripMenuItem2";
             toolStripMenuItem2.Size = new Size(101, 26);
             toolStripMenuItem2.Text = ".\\";
+            toolStripMenuItem2.Click += toolStripMenuItem2_Click;
             // 
             // helpToolStripMenuItem
             // 
@@ -102,6 +115,7 @@
             aboutRecipToolStripMenuItem.Name = "aboutRecipToolStripMenuItem";
             aboutRecipToolStripMenuItem.Size = new Size(174, 26);
             aboutRecipToolStripMenuItem.Text = "&About Recip";
+            aboutRecipToolStripMenuItem.Click += aboutRecipToolStripMenuItem_Click;
             // 
             // button1
             // 
@@ -111,6 +125,7 @@
             button1.TabIndex = 1;
             button1.Text = "Open";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -120,19 +135,23 @@
             button2.TabIndex = 2;
             button2.Text = "Make";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // pictureBox1
             // 
+            pictureBox1.Image = Properties.Resources.recip_new;
             pictureBox1.Location = new Point(112, 33);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(74, 62);
+            pictureBox1.Size = new Size(64, 62);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(161, 78);
+            label1.BackColor = Color.Transparent;
+            label1.Location = new Point(170, 78);
             label1.Name = "label1";
             label1.Size = new Size(35, 20);
             label1.TabIndex = 4;
@@ -150,17 +169,104 @@
             // 
             // panel1
             // 
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(3, 23);
+            panel1.Controls.Add(button4);
+            panel1.Controls.Add(button3);
+            panel1.Location = new Point(6, 25);
             panel1.Name = "panel1";
-            panel1.Size = new Size(182, 93);
+            panel1.Size = new Size(176, 88);
             panel1.TabIndex = 0;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(4, 45);
+            button4.Name = "button4";
+            button4.Size = new Size(169, 39);
+            button4.TabIndex = 1;
+            button4.Text = "(recipename)";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(3, 4);
+            button3.Name = "button3";
+            button3.Size = new Size(169, 35);
+            button3.TabIndex = 0;
+            button3.Text = "(recipename)";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(button8);
+            groupBox2.Controls.Add(button7);
+            groupBox2.Controls.Add(button6);
+            groupBox2.Controls.Add(button5);
+            groupBox2.Controls.Add(comboBox1);
+            groupBox2.Location = new Point(12, 109);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(205, 89);
+            groupBox2.TabIndex = 6;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "App settings";
+            // 
+            // button8
+            // 
+            button8.Location = new Point(187, -8);
+            button8.Name = "button8";
+            button8.Size = new Size(24, 29);
+            button8.TabIndex = 4;
+            button8.Text = "-";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
+            // 
+            // button7
+            // 
+            button7.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            button7.Location = new Point(113, 60);
+            button7.Name = "button7";
+            button7.Size = new Size(86, 26);
+            button7.TabIndex = 3;
+            button7.Text = "↺ RESET";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
+            // button6
+            // 
+            button6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            button6.Location = new Point(6, 60);
+            button6.Name = "button6";
+            button6.Size = new Size(104, 26);
+            button6.TabIndex = 2;
+            button6.Text = "↻RESTART";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(133, 30);
+            button5.Name = "button5";
+            button5.Size = new Size(66, 29);
+            button5.TabIndex = 1;
+            button5.Text = "Set";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(6, 30);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 28);
+            comboBox1.TabIndex = 0;
+            comboBox1.Text = "Color";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(436, 209);
+            Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
@@ -175,10 +281,13 @@
             MinimumSize = new Size(454, 186);
             Name = "Form1";
             Text = "Recip v1.2-c";
+            Load += Form1_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox1.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            groupBox2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -199,5 +308,13 @@
         private Label label1;
         private GroupBox groupBox1;
         private Panel panel1;
+        private Button button4;
+        private Button button3;
+        private GroupBox groupBox2;
+        private ComboBox comboBox1;
+        private Button button5;
+        private Button button7;
+        private Button button6;
+        private Button button8;
     }
 }

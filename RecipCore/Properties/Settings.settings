@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RecipCore.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LastRecipe" Type="System.String" Scope="User">
+      <Value Profile="(Default)">No last recipe</Value>
+    </Setting>
+    <Setting Name="penLastRecipe" Type="System.String" Scope="User">
+      <Value Profile="(Default)">No recipe</Value>
+    </Setting>
+    <Setting Name="LRRoute" Type="System.String" Scope="User">
+      <Value Profile="(Default)">about:blank</Value>
+    </Setting>
+    <Setting Name="pLRRoute" Type="System.String" Scope="User">
+      <Value Profile="(Default)">about:blank</Value>
+    </Setting>
+    <Setting Name="noLastRecipe" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Language" Type="System.String" Scope="User">
+      <Value Profile="(Default)">EN</Value>
+    </Setting>
+    <Setting Name="SavedLogo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COLORNEW</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
