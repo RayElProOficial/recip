@@ -57,7 +57,7 @@ public static class Strings
                 MenuFileNew = "&New";
                 MenuFileOpen = "&Open";
                 MenuHelpAbout = "&About Recip";
-                LabelAbout = "Recip v1.1 is the latest version (as of 05-05-2025). Its license is MIT\n License, check the license terms and rights just below. To contribute,\nvisit the project site: https://github.com/repoficialx/recip";
+                LabelAbout = "Recip v1.2 is the latest version (as of 2025-5-6). Its license is MIT\n License, check the license terms and rights just below. To contribute,\nvisit the project site: https://github.com/repoficialx/recip";
                 LabelRecipeName = "Recipe Name:";
                 LabelIngredients = "Ingredients:";
                 LabelSteps = "Steps:";
@@ -90,7 +90,7 @@ public static class Strings
                 MenuFileNew = "&Nuevo";
                 MenuFileOpen = "&Abrir";
                 MenuHelpAbout = "Acerca de &Recip";
-                LabelAbout = "Recip v1.1 es la versión más reciente (al 05-05-2025). Su licencia es la \nLicencia MIT. Puedes ver tus derechos y los términos debajo. Para \ncontribuir, visita el proyecto: https://github.com/repoficialx/recip";
+                LabelAbout = "Recip v1.2 es la versión más reciente (al 06-05-2025). Su licencia es la \nLicencia MIT. Puedes ver tus derechos y los términos debajo. Para \ncontribuir, visita el proyecto: https://github.com/repoficialx/recip";
                 LabelRecipeName = "Nombre de la receta:";
                 LabelIngredients = "Ingredientes:";
                 LabelSteps = "Pasos:";
